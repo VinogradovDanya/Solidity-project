@@ -1,8 +1,9 @@
 // SPDX-License-Identifier: MIT
-
 pragma solidity ^0.8.0;
 
 contract Payments {
+
+    // @dev create a person: who want to donate in DAO(charity)
     struct Payment {
         uint amount;
         uint timestamp;
@@ -10,6 +11,7 @@ contract Payments {
         string message;
     }
 
+    //@dev create user's payment
     struct Balance {
         uint totalPayments;
         mapping(uint => Payment) payments;
